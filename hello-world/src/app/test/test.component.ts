@@ -13,7 +13,22 @@ import { getCurrencySymbol } from '@angular/common';
             <h2 [ngClass]="multiclass">Titanic</h2>
             <h2 [style.color]="'orange'">kalam</h2>
             <h2 [style.color]="isSpecial ? 'red' :'blue'">stackroute</h2>
-            
+            <button (click)="onClick($event)" >greet</button>
+            {{greeting}}
+            <button (click)="greeting='welcome guyzz'">GREETS</button>
+            <input #id type="text">
+            <button (click)="messagelog(id.value)">log</button>
+            <!--Two way binding-->
+            <input [(ngModel)]="name" type="text">
+            {{name}}
+
+
+
+
+
+
+
+
             `,
 
   styles: [`
@@ -30,7 +45,7 @@ import { getCurrencySymbol } from '@angular/common';
   `]
 })
 export class TestComponent implements OnInit {
-
+  
   public name="vinod";
   public myId="testId";
   public successclass="text-success";
@@ -42,7 +57,17 @@ export class TestComponent implements OnInit {
     "text-special":this.isSpecial
 
   }
+
+  onClick(event){
+    console.log(event);
+    this.greeting="Welcome"
+  }
   constructor() { }
+  
+  messagelog(value)
+  {
+    console.log(value);
+  }
 
   ngOnInit() {
   }

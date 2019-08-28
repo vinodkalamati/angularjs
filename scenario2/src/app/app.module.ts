@@ -4,14 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { SturucturalDirectivesComponent } from './stuructural-directives/stuructural-directives.component';
+import { Component2Component } from './component2/component2.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    SturucturalDirectivesComponent
+    Component2Component
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { SturucturalDirectivesComponent } from './stuructural-directives/stuructural-directives.component';
+import { Component1Component } from './component1/component1.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    SturucturalDirectivesComponent
+    Component1Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
